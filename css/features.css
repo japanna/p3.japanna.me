@@ -1,0 +1,12 @@
+.letter {
+	float: left;
+}
+
+.placed_letters {
+	left: 85px;
+	top: 40px;
+	position: relative;
+	width: 30px;
+	height: 60px;
+}
+
