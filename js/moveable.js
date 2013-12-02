@@ -14,6 +14,13 @@ $('.letter').mousedown(function() {
 	
 	// Put letters on the canvas
 	$('#canvas').append(new_letter);
+
+	// Animated bounce
+	new_letter.animate({ top: "50px"}, "fast");
+	new_letter.animate({ top: "30px"}, "slow");
+	new_letter.animate({ top: "50px"}, "slow");
+	               
+
 });
 
 /*-----------------------------------------------------------------
@@ -39,8 +46,9 @@ $('.letter').mouseup(function(){
 /*---
 google search
 ---*/
-
-//var google_url = 'https://www.googleapis.com/customsearch/v1?key=AIzaSyBcbjl3tSdI9osS-oSE-gVtJORg7HvHtUI&cx=006467656015700839024:t5vsbe0nnym&q=' + word + '&searchType=image&imgSize=medium&alt=json&callback=?';
+	// Only do image search for three letters or longer words
+	if(word.length > 2) {
+	//var google_url = 'https://www.googleapis.com/customsearch/v1?key=AIzaSyBcbjl3tSdI9osS-oSE-gVtJORg7HvHtUI&cx=006467656015700839024:t5vsbe0nnym&q=' + word + '&searchType=image&imgSize=medium&alt=json&callback=?';
 	var google_url = 'http://ajax.googleapis.com/ajax/services/search/images?v=1.0&imgsz=medium&q=' + word + '&callback=?';	
 		
 	// getJSON is a Ajax method provided to us by jQuery
@@ -50,7 +58,7 @@ google search
 	
 		// This line will basically parse the data we get back from Google into a nice array we can work with
 	    var images = data.responseData.results;
-	
+		console.log(images);
 		// Only attempt to do the following if we had images...I.e there was more than 0 images
 	    if(images.length > 0){
 			
@@ -60,10 +68,10 @@ google search
 	        $.each(images, function(key, image) {
 	        
 	        	// Create a new image element
-	        	var new_image_element = "<img class='stickers circular' src='" + image.url + "'>";
+	        	var new_image_element = "<img class='image' src='" + image.url + "'><br>";
 	        	
 	        	// Now put the new image in our results div
-	            $('#search_results').prepend(new_image_element);
+	            $('#search_results').append(new_image_element);
 	
 	        });
 	    }	   
@@ -73,6 +81,7 @@ google search
 	//$( "input:text" ).val( word);
 	// clear the canvas when search has been submitted
 	//$('.placed_letters').remove();
+}
 });
 
 

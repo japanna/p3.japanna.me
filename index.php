@@ -1,29 +1,32 @@
 <html>
 	<head>
 		<title>Moveable Alphabet</title>
-		
 		<!-- Adobe's Edgefonts script -->
     	<script src="http://use.edgefonts.net/cabin.js"></script> 
 
-		<link rel="stylesheet" href="css/main.css">
-		<link rel="stylesheet" href="css/features.css">
+		<!--<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/features.css"> -->
+		<link rel="stylesheet" href="css/style.css">
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
 	</head>
-
-
 	<body>
-
-		<div id="wrapper">
-
+		<header>
 			<h1>Moveable Alphabet</h1>
-			<h2>Click on the letters you want</h2>
-			<!-- Top section: letters -->
+			<h2>a modern way to learn how to spell</h2>
+		</header>
+		<div id="wrapper">
+			<!-- Note pad -->
+			<div id="writing_area">
+			    	<div id="canvas"></div>
+			    	<input type="button" id="refresh-btn" value="Start over">
+			</div>
+			<!-- Image search results -->	
+			<div id="search_results"></div>
+			<!-- Letter picker -->	
 			<div id="letter_box">
-
-				<!-- Letter picker -->	
-					
+				<div class="box_row">
 					<img class="letter" src="img/a.gif" value='a' alt="Letter a">
 					<img class="letter" src="img/b.gif" value='b' alt="Letter b">
 					<img class="letter" src="img/c.gif" value='c' alt="Letter c">
@@ -33,8 +36,9 @@
 					<img class="letter" src="img/g.gif" value='g' alt="Letter g">
 					<img class="letter" src="img/h.gif" value='h' alt="Letter h">
 					<img class="letter" src="img/i.gif" value='i' alt="Letter i">
-					<img class="letter" src="img/j.gif" value='j' alt="Letter j">
-					<img class="letter" src="img/k.gif" value='k' alt="Letter k">
+				</div>
+				<div class="box_row">
+					<img class="letter" src="img/j.gif" value='j' alt="Letter j">					<img class="letter" src="img/k.gif" value='k' alt="Letter k">
 					<img class="letter" src="img/l.gif" value='l' alt="Letter l">
 					<img class="letter" src="img/m.gif" value='m' alt="Letter m">
 					<img class="letter" src="img/n.gif" value='n' alt="Letter n">
@@ -42,6 +46,8 @@
 					<img class="letter" src="img/p.gif" value='p' alt="Letter p">
 					<img class="letter" src="img/q.gif" value='q' alt="Letter q">
 					<img class="letter" src="img/r.gif" value='r' alt="Letter r">
+				</div>
+				<div class="box_row">
 					<img class="letter" src="img/s.gif" value='s' alt="Letter s">
 					<img class="letter" src="img/t.gif" value='t' alt="Letter t">
 					<img class="letter" src="img/u.gif" value='u' alt="Letter u">
@@ -50,23 +56,18 @@
 					<img class="letter" src="img/x.gif" value='x' alt="Letter x">
 					<img class="letter" src="img/y.gif" value='y' alt="Letter y">
 					<img class="letter" src="img/z.gif" value='z' alt="Letter z">
-
-
-					<br>
-						<div id="search_results"></div>
-			</div>
-
-			<!-- Bottom section: random image, writing space and note pad -->
-			<div id="writing_area">
-				<div id="notebook">
-			    	<div id="canvas">
-					</div>
+					<img id="backspace" src="img/backspace.gif" alt="Backspace">
 				</div>
-			<input type="button" id="refresh-btn" value="Start over">
-		<input type="button" id="search-btn" value="Search">
 			</div>
 		</div>
-
+		<footer>
+    <p><a href="http://twitter.com/japanna" target="_blank">twitter</a> <span class="pipe">
+            &nbsp;/&nbsp; </span>
+        <a href="https://github.com/japanna" target="_blank">github</a> <span class="pipe">
+            &nbsp;/&nbsp; </span>
+        <a href="http://linkedin.com/in/annamckelvey" target="_blank">linked in</a>
+    </p>
+  </footer>
 		<script src="js/moveable.js"></script>
 	</body>
 </html>
