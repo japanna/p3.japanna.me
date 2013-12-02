@@ -49,7 +49,7 @@ google search
 	// Only do image search for three letters or longer words
 	if(word.length > 2) {
 	//var google_url = 'https://www.googleapis.com/customsearch/v1?key=AIzaSyBcbjl3tSdI9osS-oSE-gVtJORg7HvHtUI&cx=006467656015700839024:t5vsbe0nnym&q=' + word + '&searchType=image&imgSize=medium&alt=json&callback=?';
-	var google_url = 'http://ajax.googleapis.com/ajax/services/search/images?v=1.0&imgsz=medium&q=' + word + '&callback=?';	
+	var google_url = 'http://ajax.googleapis.com/ajax/services/search/images?v=1.0&q=' + word + '&callback=?&safe=active&rsz=3';	
 		
 	// getJSON is a Ajax method provided to us by jQuery
 	// It's going to make a call to the url we built above, and let us work with the results that Google sends back

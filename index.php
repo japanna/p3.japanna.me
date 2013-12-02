@@ -34,23 +34,29 @@
 					<img class="letter" src="img/e.gif" value='e' alt="Letter e">
 					<img class="letter" src="img/f.gif" value='f' alt="Letter f">
 					<img class="letter" src="img/g.gif" value='g' alt="Letter g">
+					</div>
+				<div class="box_row">
 					<img class="letter" src="img/h.gif" value='h' alt="Letter h">
 					<img class="letter" src="img/i.gif" value='i' alt="Letter i">
-				</div>
-				<div class="box_row">
-					<img class="letter" src="img/j.gif" value='j' alt="Letter j">					<img class="letter" src="img/k.gif" value='k' alt="Letter k">
+				
+					<img class="letter" src="img/j.gif" value='j' alt="Letter j">					
+					<img class="letter" src="img/k.gif" value='k' alt="Letter k">
 					<img class="letter" src="img/l.gif" value='l' alt="Letter l">
 					<img class="letter" src="img/m.gif" value='m' alt="Letter m">
+
 					<img class="letter" src="img/n.gif" value='n' alt="Letter n">
+					</div>
+				<div class="box_row">
 					<img class="letter" src="img/o.gif" value='o' alt="Letter o">
 					<img class="letter" src="img/p.gif" value='p' alt="Letter p">
 					<img class="letter" src="img/q.gif" value='q' alt="Letter q">
 					<img class="letter" src="img/r.gif" value='r' alt="Letter r">
-				</div>
-				<div class="box_row">
+				
 					<img class="letter" src="img/s.gif" value='s' alt="Letter s">
 					<img class="letter" src="img/t.gif" value='t' alt="Letter t">
 					<img class="letter" src="img/u.gif" value='u' alt="Letter u">
+					</div>
+				<div class="box_row">
 					<img class="letter" src="img/v.gif" value='v' alt="Letter v">
 					<img class="letter" src="img/w.gif" value='w' alt="Letter w">
 					<img class="letter" src="img/x.gif" value='x' alt="Letter x">

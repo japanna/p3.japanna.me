@@ -51,6 +51,7 @@ table {
 /* ----------- end reset -------------------------------*/
 
 body {
+    max-width: 1024px;
     font-family: Arial, Helvetica, Verdana, sans-serif;
 }
 
@@ -92,7 +93,7 @@ h2 {
 
 #search_results {
     width:110;
-    height: 445px;
+    height: 315px;
     border-color: orange;
     border-style: solid;
     border-width: 2px;
@@ -123,6 +124,11 @@ h2 {
    
 }
 
+.letter {
+    width: 45px;
+    height: 72px;
+}
+
 .placed_letters {
     left: 15px;
     top: 30px;
@@ -132,8 +138,8 @@ h2 {
 }
 
 .image {
-  width: 110px;
-  height: 110px;
+  width: 100px;
+  height: 100px;
 }
 
 footer {
