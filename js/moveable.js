@@ -1,99 +1,96 @@
 /*-----------------------------------------------------------------
-Letters
+Append letters
 Makes a copy of each letter that is clicked and puts it in the 
 notebook area.
 -------------------------------------------------------------------*/	
 
-// When a letter is picked
+// when a letter is picked
 $('.letter').mousedown(function() {
-	// Clone the sticker that was clicked
+	// clone the sticker that was clicked
 	var new_letter = $(this).clone();
 	
-	// Add new class so we can distinguish placed letters
+	// add new class so we can distinguish placed letters
 	new_letter.removeClass('letter');
 	new_letter.addClass('placed_letters');
 	
-	// Put letters on the canvas
+	// put letters on the canvas
 	$('#canvas').append(new_letter);
 
-	// Animated bounce
+	// animated bounce
 	new_letter.animate({ top: "50px"}, "fast");
 	new_letter.animate({ top: "30px"}, "slow");
 	new_letter.animate({ top: "50px"}, "slow");
-	               
-
 });
 
 /*-----------------------------------------------------------------
-Search
+Make an image search every time a letter is clicked
 -------------------------------------------------------------------*/	
 
-// Search for what you'vw written
+// search for what you've written
 $('.letter').mouseup(function(){
-	// Clear out the search results div 
-	$('#search_results').html('');
-
-	// Put all the letter objects in an array
-	$s = $('.placed_letters');
-	
-	$letter_array = [];
-	// Extract letter values ("a", "b" etc.) and put in an array
-	$s.each(function(i){
-		$letter_array[i] = $(this).attr('value');
-	})
-	// Make a string out of the letters
-	word = $letter_array.join("");
-
-/*---
-google search
----*/
-	// Only do image search for three letters or longer words
-	if(word.length > 2) {
-	//var google_url = 'https://www.googleapis.com/customsearch/v1?key=AIzaSyBcbjl3tSdI9osS-oSE-gVtJORg7HvHtUI&cx=006467656015700839024:t5vsbe0nnym&q=' + word + '&searchType=image&imgSize=medium&alt=json&callback=?';
-	var google_url = 'http://ajax.googleapis.com/ajax/services/search/images?v=1.0&q=' + word + '&callback=?&safe=active&rsz=4';	
-		
-	// getJSON is a Ajax method provided to us by jQuery
-	// It's going to make a call to the url we built above, and let us work with the results that Google sends back
-	// Everthing in the function below is what will occur when getJSON is done and sends us the results back from Google
-	$.getJSON(google_url, function(data){
-	
-		// This line will basically parse the data we get back from Google into a nice array we can work with
-	    var images = data.responseData.results;
-		console.log(images);
-		// Only attempt to do the following if we had images...I.e there was more than 0 images
-	    if(images.length > 0){
-			
-			// .each() is a jQuery method that lets us loop through a set of data. 
-			// So here our data set is images
-			// Essentially we're unpacking our images we got back from Google
-	        $.each(images, function(key, image) {
-	        
-	        	// Create a new image element
-	        	var new_image_element = "<img class='image' src='" + image.url + "'><br>";
-	        	
-	        	// Now put the new image in our results div
-	            $('#search_results').append(new_image_element);
-	
-	        });
-	    }	   
-	});		
-
-	//var value = $s.attr('value');
-	//$( "input:text" ).val( word);
-	// clear the canvas when search has been submitted
-	//$('.placed_letters').remove();
-}
+	search();
 });
 
+/*-----------------------------------------------------------------
+Delete function
+-------------------------------------------------------------------*/
+
+// when backspace image is clicked, remove the last letter and make a new search
+$('#backspace').mousedown(function(){
+	$('#canvas').children().last().remove();
+	search();
+})
 
 /*-------------------------------------------------------------------------------------------------
 Start over
 -------------------------------------------------------------------------------------------------*/
 $('#refresh-btn').click(function() {
 	$('#search_results').html('');
-	$( "input:text" ).val("");	
-	// Remove any stickers
+	// remove letters
 	$('.placed_letters').remove();
-
 });
+
+/*-------------------------------------------------------------------------------------------------
+Search function
+-------------------------------------------------------------------------------------------------*/
+function search() {
+	// clear out the search results div 
+	$('#search_results').html('');
+	// put all the letter objects in an array
+	$s = $('.placed_letters');
+	// define array of letters
+	$letter_array = [];
+	// extract letter values ("a", "b" etc.) and put in array
+	$s.each(function(i){
+		$letter_array[i] = $(this).attr('value');
+	})
+	// make a string out of the letters (http://www.w3schools.com/jsref/jsref_join.asp)
+	word = $letter_array.join("");
+
+/*--------------------------------------------------------------------------------------------------
+google image search (deprecated version)
+----------------------------------------------------------------------------------------------------*/
+	// only do image search for three letters or longer words
+	if(word.length > 2) {
+    // search query with safe search and max results limited to 4		
+	var google_url = 'http://ajax.googleapis.com/ajax/services/search/images?v=1.0&q=' + word + '&callback=?&safe=active&rsz=4';	
+	// see documentation at https://developers.google.com/image-search/v1/jsondevguide#json_args
+	$.getJSON(google_url, function(data){
+		// the responseData property contains an array of results (images)
+	    var images = data.responseData.results;
+		// check that there were any results
+	    if(images.length > 0){
+			// the following is from Class 10 (Card O'Matic example)
+			// for each image, get the URL
+	        $.each(images, function(key, image) {
+	        	// create a new img element
+	        	var new_image_element = "<img class='image' src='" + image.url + "'>";
+	        	// append images in results div
+	            $('#search_results').append(new_image_element);
+			});
+	    }	   
+	});		
+  }
+};
+
 

@@ -14,7 +14,7 @@
 	<body>
 		<header>
 			<h1>Moveable Alphabet</h1>
-			<h2>a modern way to learn how to spell</h2>
+			<h2></h2>
 		</header>
 		<div id="wrapper">
 			<!-- Note pad -->
@@ -38,12 +38,10 @@
 				<div class="box_row">
 					<img class="letter" src="img/h.gif" value='h' alt="Letter h">
 					<img class="letter" src="img/i.gif" value='i' alt="Letter i">
-				
 					<img class="letter" src="img/j.gif" value='j' alt="Letter j">					
 					<img class="letter" src="img/k.gif" value='k' alt="Letter k">
 					<img class="letter" src="img/l.gif" value='l' alt="Letter l">
 					<img class="letter" src="img/m.gif" value='m' alt="Letter m">
-
 					<img class="letter" src="img/n.gif" value='n' alt="Letter n">
 					</div>
 				<div class="box_row">
@@ -51,7 +49,6 @@
 					<img class="letter" src="img/p.gif" value='p' alt="Letter p">
 					<img class="letter" src="img/q.gif" value='q' alt="Letter q">
 					<img class="letter" src="img/r.gif" value='r' alt="Letter r">
-				
 					<img class="letter" src="img/s.gif" value='s' alt="Letter s">
 					<img class="letter" src="img/t.gif" value='t' alt="Letter t">
 					<img class="letter" src="img/u.gif" value='u' alt="Letter u">
@@ -67,10 +64,10 @@
 			</div>
 		</div>
 		<footer>
-    <p><a href="http://twitter.com/japanna" target="_blank">twitter</a> <span class="pipe">
-            &nbsp;/&nbsp; </span>
-        <a href="https://github.com/japanna" target="_blank">github</a> <span class="pipe">
-            &nbsp;/&nbsp; </span>
+    <p><a href="http://twitter.com/japanna" target="_blank">about</a> <span class="pipe">
+            &nbsp;|&nbsp; </span>
+        <a href="https://github.com/japanna" target="_blank">contact</a> <span class="pipe">
+            &nbsp;|&nbsp; </span>
         <a href="http://linkedin.com/in/annamckelvey" target="_blank">linked in</a>
     </p>
   </footer>
