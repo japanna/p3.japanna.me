@@ -21,7 +21,9 @@
 			    	<img id="refresh" src="img/delete.png" alt='refresh'>
 			</div>
 			<!-- Image search results -->	
-			<div id="search_results"></div>
+			<div id="search_results">
+				<img id="greeting" src="img/venus0.png" alt="venus de milo">
+			</div>
 			<!-- Letter picker -->	
 			<div id="letter_box">
 				<div class="box_row">

@@ -52,6 +52,7 @@ table {
 
 body {
     max-width: 1024px;
+    height: 700px;
     font-family: Arial, Helvetica, Verdana, sans-serif;
 }
 
@@ -98,6 +99,12 @@ h2 {
     margin-right: 50px;
     padding-top: 20px;
    }
+
+#greeting {
+    position: relative;
+    right: 70px;
+    bottom: 1020px;
+}
 
 #writing_area {
     background-image: url('../img/notebook_cc.jpg');

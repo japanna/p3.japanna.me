@@ -4,6 +4,21 @@ Makes a copy of each letter that is clicked and puts it in the
 notebook area.
 -------------------------------------------------------------------*/	
 
+/*-----------------------------------------------------------------
+Demo animations
+-------------------------------------------------------------------*/	
+$(document).ready(function(){
+	$('#greeting').animate({bottom: "100px"}, 5000);
+	setTimeout(function() {
+      // Do something after 5 seconds
+      $('#greeting').animate({bottom: "-550px"}, 2000);
+      $('#greeting').slideUp(10);
+}, 6000);
+	
+});
+
+
+
 // when a letter is picked
 $('.letter').mousedown(function() {
 	// clone the sticker that was clicked
