@@ -5,7 +5,8 @@
     	<script src="http://use.edgefonts.net/cabin.js"></script> 
 
 		<link rel="stylesheet" href="css/style.css">
-	
+		<link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="css/mobile.css">
+
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
 	</head>
