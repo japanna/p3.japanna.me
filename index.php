@@ -6,21 +6,22 @@
 
 		<!--<link rel="stylesheet" href="css/main.css">
 		<link rel="stylesheet" href="css/features.css"> -->
-		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" media="all" href="css/style.css">
+		<link rel="stylesheet" media="handheld and (max-width: 800px)" href="css/mobile.css">
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
 	</head>
 	<body>
 		<header>
-			<h1>Moveable Alphabet</h1>
+			<h1>moveable alphabet</h1>
 			<h2></h2>
 		</header>
 		<div id="wrapper">
 			<!-- Note pad -->
 			<div id="writing_area">
 			    	<div id="canvas"></div>
-			    	<input type="button" id="refresh-btn" value="Start over">
+			    	<img id="refresh" src="img/delete.png" alt='refresh'>
 			</div>
 			<!-- Image search results -->	
 			<div id="search_results"></div>
@@ -53,22 +54,20 @@
 					<img class="letter" src="img/t.gif" value='t' alt="Letter t">
 					<img class="letter" src="img/u.gif" value='u' alt="Letter u">
 					</div>
-				<div class="box_row">
+				<div>
 					<img class="letter" src="img/v.gif" value='v' alt="Letter v">
 					<img class="letter" src="img/w.gif" value='w' alt="Letter w">
 					<img class="letter" src="img/x.gif" value='x' alt="Letter x">
 					<img class="letter" src="img/y.gif" value='y' alt="Letter y">
 					<img class="letter" src="img/z.gif" value='z' alt="Letter z">
-					<img id="backspace" src="img/backspace.gif" alt="Backspace">
+					<img id="backspace" src="img/eraser.png" alt="Backspace">
 				</div>
 			</div>
 		</div>
 		<footer>
-    <p><a href="http://twitter.com/japanna" target="_blank">about</a> <span class="pipe">
-            &nbsp;|&nbsp; </span>
-        <a href="https://github.com/japanna" target="_blank">contact</a> <span class="pipe">
-            &nbsp;|&nbsp; </span>
-        <a href="http://linkedin.com/in/annamckelvey" target="_blank">linked in</a>
+    <p><a href="http://twitter.com/japanna" target="_blank">about &nbsp;|</a> 
+        <a href="https://github.com/japanna" target="_blank">&nbsp;contact&nbsp; |</a> 
+        <a href="http://linkedin.com/in/annamckelvey" target="_blank">&nbsp;linked in</a>
     </p>
   </footer>
 		<script src="js/moveable.js"></script>

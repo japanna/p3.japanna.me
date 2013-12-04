@@ -44,7 +44,7 @@ $('#backspace').mousedown(function(){
 /*-------------------------------------------------------------------------------------------------
 Start over
 -------------------------------------------------------------------------------------------------*/
-$('#refresh-btn').click(function() {
+$('#refresh').click(function() {
 	$('#search_results').html('');
 	// remove letters
 	$('.placed_letters').remove();
@@ -83,8 +83,8 @@ google image search (deprecated version)
 			// the following is from Class 10 (Card O'Matic example)
 			// for each image, get the URL
 	        $.each(images, function(key, image) {
-	        	// create a new img element
-	        	var new_image_element = "<img class='image' src='" + image.url + "'>";
+	        	// create a link and img element 
+	        	var new_image_element = "<a href='" + image.url +"' target='_blank'><img class='image' src='" + image.url + "'></a>";
 	        	// append images in results div
 	            $('#search_results').append(new_image_element);
 			});
