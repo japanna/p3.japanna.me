@@ -6,7 +6,7 @@
 
 		<!--<link rel="stylesheet" href="css/main.css">
 		<link rel="stylesheet" href="css/features.css"> -->
-		<link rel="stylesheet" media="all" href="css/style.css">
+		<link rel="stylesheet" href="css/style.css">
 		<link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="css/mobile.css">
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
