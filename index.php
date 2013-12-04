@@ -7,7 +7,7 @@
 		<!--<link rel="stylesheet" href="css/main.css">
 		<link rel="stylesheet" href="css/features.css"> -->
 		<link rel="stylesheet" media="all" href="css/style.css">
-		<link rel="stylesheet" media="handheld and (max-width: 1024px)" href="css/mobile.css">
+		<link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="css/mobile.css">
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
