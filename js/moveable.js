@@ -5,23 +5,94 @@ notebook area.
 -------------------------------------------------------------------*/	
 
 /*-----------------------------------------------------------------
-Demo animations
+Demo animations (appear only once every 3 days)
+Source for timer: http://stackoverflow.com/questions/10979562/run-jquery-function-just-once-per-visit
 -------------------------------------------------------------------*/	
 $(document).ready(function(){
-	$('#greeting').animate({bottom: "100px"}, 5000);
+	// only show demo animation once per day (see Source above)
 	setTimeout(function() {
-      // Do something after 5 seconds
-      $('#greeting').animate({bottom: "-550px"}, 2000);
-      $('#greeting').slideUp(10);
-}, 6000);
-	
+		$('#demo').fadeIn(1000);
+    	}, 7000);
+	var now = (new Date()).getTime();
+	var lastTime = 0;
+	var lastTimeStr = localStorage['lastTime'];
+	if (lastTimeStr) lastTime = parseInt(lastTimeStr, 10);
+	if (now - lastTime > 0) { //3*24*60*60*1000
+    // do animation
+    	$('#greeting').animate({bottom: "100px"}, 3500);
+		setTimeout(function() {
+      		// Do after 6 seconds
+      		$('#greeting').animate({bottom: "-550px"}, 2000);
+      		$('#greeting').slideUp(10);
+		}, 5000);
+
+	} 
+	localStorage['lastTime'] = ""+now;
 });
-
-
+// animation start
+$('#demo').click(function(){
+	// remove demo button on click
+	$('#demo').remove();
+	// "click on letters"
+	$('#msg1').fadeIn(1000);
+	$('#hand').fadeIn(1000);
+	$('#hand').animate({right: "-100px"}, 2000);
+	$('#hand').fadeOut(1100);
+	$('#hand').animate({bottom: "-200px"}, 700);
+	$('#msg1').fadeOut(2000);
+	// demo word appears
+	setTimeout(function() {
+		$('.demo_ltr').fadeIn(1000);
+		// "to make words"
+		$('#msg2').fadeIn(1500);
+	}, 3000);
+	setTimeout(function() {
+		$('#msg2').fadeOut(2000);
+	}, 3500);
+	setTimeout(function() {
+		//"You'll get pictures"
+		$('#msg3').fadeIn(1000);
+	}, 6500);
+	// demo images appear
+	setTimeout(function() {
+		$('#search_results_img').fadeIn(1000);
+		$('#msg2').fadeOut(1000);
+	}, 8000);
+	setTimeout(function() {
+		$('#msg3').fadeOut(1000);
+	}, 9500); 
+	// trash can click
+	setTimeout(function() {
+		$('#search_results_img').remove();
+		$('#hand').fadeIn(1500);
+		$('#hand').fadeOut(1300);
+		// "click on trash"
+		$('#msg4').fadeIn(1000);
+	}, 11000);  
+	setTimeout(function() {
+		$('#msg4').fadeOut(1000);
+	}, 13000); 
+	setTimeout(function() {
+		// "to start over"
+		$('#msg5').fadeIn(1000);
+		$('.demo_ltr').fadeOut(1000);
+	}, 14500); 
+	setTimeout(function() {
+		$('#msg5').fadeOut(1100);
+	}, 15000); 
+	setTimeout(function() {
+		// "Good job!"
+		$('#msg6').fadeIn(2000);
+	}, 17000); 
+});
 
 // when a letter is picked
 $('.letter').mousedown(function() {
-	// clone the sticker that was clicked
+	// remove demo sticker or "Good job!"-sticker (if there)
+	$('#demo').fadeOut(1000);
+	$('#msg6').remove();
+
+	// clone the letter that was clicked
 	var new_letter = $(this).clone();
 	
 	// add new class so we can distinguish placed letters
@@ -83,7 +154,7 @@ function search() {
 	word = $letter_array.join("");
 
 /*--------------------------------------------------------------------------------------------------
-google image search (deprecated version)
+google image search (deprecated version, used in lecture 10)
 ----------------------------------------------------------------------------------------------------*/
 	// only do image search for three letters or longer words
 	if(word.length > 2) {

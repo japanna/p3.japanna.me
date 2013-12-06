@@ -83,6 +83,23 @@ h2 {
     margin-left: 60px;
 }
 
+#demo {
+    float: right;
+    display: none;
+    cursor: pointer;
+}
+
+#msg1, #msg2, #msg3, #msg4, #msg5, #msg6 {
+    float: right;
+    display: none;
+}
+
+#hand {
+    display: none;
+    position: relative;
+    right:  370px;
+}
+
 #backspace {
     height: 74px;
     width: 74px;
@@ -97,13 +114,19 @@ h2 {
     height: 400px;
     float: right;
     margin-right: 50px;
-    padding-top: 20px;
+    margin-top: 30px;
    }
 
 #greeting {
     position: relative;
     right: 70px;
     bottom: 1020px;
+}
+
+#search_results_img {
+    display: none;
+    position: relative;
+    left: 30px;
 }
 
 #writing_area {
@@ -120,6 +143,15 @@ h2 {
     height: 360px;
     margin: auto;
     margin-top: 10px;
+}
+
+.demo_ltr {
+    position: relative;
+    right: -80px;
+    bottom: -100px;
+    display: none;
+    width: 30px;
+    height: 60px;
 }
 
 #refresh {
