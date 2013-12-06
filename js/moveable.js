@@ -31,20 +31,23 @@ $(document).ready(function(){
 });
 // animation start
 $('#demo').click(function(){
-	// remove demo button on click
+	// remove demo button and clickable trash can on click
+	$('#refresh').fadeOut(1);
 	$('#demo').remove();
 	// "click on letters"
 	$('#msg1').fadeIn(800);
+	setTimeout(function() {
 	$('#hand').fadeIn(1000);
 	$('#hand').animate({right: "-250px"}, 2000);
 	$('#hand').fadeOut(800);
 	$('#msg1').fadeOut(1000);
+	}, 1000);
 	// demo word appears
 	setTimeout(function() {
 		$('.demo_ltr').fadeIn(1000);
 		// "to make words"
-		$('#msg2').fadeIn(1000);
-	}, 3000);
+		$('#msg2').fadeIn(1200);
+	}, 3500);
 	setTimeout(function() {
 		$('#msg2').fadeOut(1500);
 	}, 3500);
@@ -52,7 +55,7 @@ $('#demo').click(function(){
 		//"You'll get pictures"
 		$('#msg3').fadeIn(1000);
 		$('#search_results_img').fadeIn(1000);
-	}, 6500);
+	}, 6200);
 	// demo images appear
 	setTimeout(function() {
 		$('#msg2').fadeOut(1000);
@@ -60,32 +63,34 @@ $('#demo').click(function(){
 	setTimeout(function() {
 		$('#msg3').fadeOut(1000);
 		$('#search_results_img').fadeOut(1000);
-	}, 9500); 
+	}, 9000); 
 	// trash can click
 	setTimeout(function() {
-		$('#hand2').fadeIn(1000);
+		$('#hand2').fadeIn(1200);
 		// "click on trash"
 		$('#msg4').fadeIn(1000);
 	}, 11000);  
 	setTimeout(function() {
 		$('#hand2').fadeOut(1200);
 		$('#msg4').fadeOut(1000);
+		$('.demo_ltr').fadeOut(1500);
 	}, 13000); 
 	setTimeout(function() {
 		// "to start over"
 		$('#msg5').fadeIn(1000);
 	}, 14500); 
 	setTimeout(function() {
-		$('#msg5').fadeOut(1100);
-		$('.demo_ltr').fadeOut(1000);
+		$('#msg5').fadeOut(1500);
 	}, 15500); 
 	setTimeout(function() {
 		// "Good job!"
-		$('#msg6').fadeIn(1500);
-	}, 17000); 
+		$('#msg6').fadeIn(1300);
+	}, 17500); 
 	setTimeout(function() {
-		$('#msg6').fadeOut(1500);
+		$('#msg6').fadeOut(1300);
+		$('#refresh').fadeIn(50);
 	}, 19000); 
+
 });
 
 // when a letter is picked
@@ -172,7 +177,7 @@ google image search (deprecated version, used in lecture 10)
 			// for each image, get the URL
 	        $.each(images, function(key, image) {
 	        	// create a link and img element 
-	        	var new_image_element = "<a href='" + image.url +"' target='_blank'><img class='image' src='" + image.url + "'></a>";
+	        	var new_image_element = "<div><a href='" + image.url +"' target='_blank'><img class='image' src='" + image.url + "'></a></div>";
 	        	// append images in results div
 	            $('#search_results').append(new_image_element);
 			});
