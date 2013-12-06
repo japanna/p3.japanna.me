@@ -151,7 +151,7 @@ function search() {
 	$letter_array = [];
 	// extract letter values ("a", "b" etc.) and put in array
 	$s.each(function(i){
-		$letter_array[i] = $(this).attr('value');
+		$letter_array[i] = $(this).attr('alt');
 	})
 	// make a string out of the letters (http://www.w3schools.com/jsref/jsref_join.asp)
 	word = $letter_array.join("");
