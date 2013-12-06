@@ -150,7 +150,9 @@ demo function
 -------------------------------------------------------------*/
 function demo(){
 // animation start
-
+	//remove demo link while demo lasts
+	var gone = $('#demo_link').detach();
+	$('#demo_link').detach();
 	// remove demo button and clickable trash can on click
 	$('#refresh').fadeOut(1);
 	$('#demo').remove();
@@ -158,7 +160,7 @@ function demo(){
 	$('#msg1').fadeIn(800);
 	setTimeout(function() {
 	$('#hand').fadeIn(1000);
-	$('#hand').animate({right: "-250px"}, 2000);
+	$('#hand').animate({right: "-230px"}, 2000);
 	$('#hand').fadeOut(800);
 	$('#msg1').fadeOut(1000);
 	}, 1000);
@@ -209,6 +211,8 @@ function demo(){
 	setTimeout(function() {
 		$('#msg6').fadeOut(1300);
 		$('#refresh').fadeIn(5000);
+		// reattach demo link
+	$('footer').append(gone);
 	}, 19500); 
 };
 
