@@ -1,8 +1,8 @@
 <html>
 	<head>
 		<title>Moveable Alphabet</title>
-		<!-- Adobe's Edgefonts script 
-    	<script src="http://use.edgefonts.net/cabin.js"></script> -->
+		<!-- Adobe's Edgefonts script -->
+    	<script src="http://use.edgefonts.net/cabin.js"></script> 
 
 		<link rel="stylesheet" href="css/style.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>

@@ -10,14 +10,12 @@ Source for timer: http://stackoverflow.com/questions/10979562/run-jquery-functio
 -------------------------------------------------------------------*/	
 $(document).ready(function(){
 	// only show demo animation once per day (see Source above)
-	setTimeout(function() {
-		$('#demo').fadeIn(1000);
-    	}, 7000);
+	
 	var now = (new Date()).getTime();
 	var lastTime = 0;
 	var lastTimeStr = localStorage['lastTime'];
 	if (lastTimeStr) lastTime = parseInt(lastTimeStr, 10);
-	if (now - lastTime > 0) { //3*24*60*60*1000
+	if (now - lastTime > 3*24*60*60*1000) { 
     // do animation
     	$('#greeting').animate({bottom: "100px"}, 3500);
 		setTimeout(function() {
@@ -25,7 +23,9 @@ $(document).ready(function(){
       		$('#greeting').animate({bottom: "-550px"}, 2000);
       		$('#greeting').slideUp(10);
 		}, 5000);
-
+		setTimeout(function() {
+		$('#demo').fadeIn(1000);
+    	}, 7000);
 	} 
 	localStorage['lastTime'] = ""+now;
 });
@@ -84,6 +84,9 @@ $('#demo').click(function(){
 		// "Good job!"
 		$('#msg6').fadeIn(2000);
 	}, 17000); 
+	setTimeout(function() {
+		$('#msg6').fadeOut(1500);
+	}, 19000); 
 });
 
 // when a letter is picked
