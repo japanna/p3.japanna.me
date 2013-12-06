@@ -15,9 +15,9 @@ $(document).ready(function(){
 	var lastTime = 0;
 	var lastTimeStr = localStorage['lastTime'];
 	if (lastTimeStr) lastTime = parseInt(lastTimeStr, 10);
-	if (now - lastTime > 3*24*60*60*1000) { 
+	if (now - lastTime > 0) { //3*24*60*60*1000
     // do animation
-    	$('#greeting').animate({bottom: "100px"}, 3500);
+    	$('#greeting').animate({bottom: "50px"}, 3500);
 		setTimeout(function() {
       		// Do after 6 seconds
       		$('#greeting').animate({bottom: "-550px"}, 2000);
@@ -34,55 +34,54 @@ $('#demo').click(function(){
 	// remove demo button on click
 	$('#demo').remove();
 	// "click on letters"
-	$('#msg1').fadeIn(1000);
+	$('#msg1').fadeIn(800);
 	$('#hand').fadeIn(1000);
-	$('#hand').animate({right: "-100px"}, 2000);
-	$('#hand').fadeOut(1100);
-	$('#hand').animate({bottom: "-200px"}, 700);
-	$('#msg1').fadeOut(2000);
+	$('#hand').animate({right: "-250px"}, 2000);
+	$('#hand').fadeOut(800);
+	$('#msg1').fadeOut(1000);
 	// demo word appears
 	setTimeout(function() {
 		$('.demo_ltr').fadeIn(1000);
 		// "to make words"
-		$('#msg2').fadeIn(1500);
+		$('#msg2').fadeIn(1000);
 	}, 3000);
 	setTimeout(function() {
-		$('#msg2').fadeOut(2000);
+		$('#msg2').fadeOut(1500);
 	}, 3500);
 	setTimeout(function() {
 		//"You'll get pictures"
 		$('#msg3').fadeIn(1000);
+		$('#search_results_img').fadeIn(1000);
 	}, 6500);
 	// demo images appear
 	setTimeout(function() {
-		$('#search_results_img').fadeIn(1000);
 		$('#msg2').fadeOut(1000);
-	}, 8000);
+	}, 7700);
 	setTimeout(function() {
 		$('#msg3').fadeOut(1000);
+		$('#search_results_img').fadeOut(1000);
 	}, 9500); 
 	// trash can click
 	setTimeout(function() {
-		$('#search_results_img').remove();
-		$('#hand').fadeIn(1500);
-		$('#hand').fadeOut(1300);
+		$('#hand2').fadeIn(1000);
 		// "click on trash"
 		$('#msg4').fadeIn(1000);
 	}, 11000);  
 	setTimeout(function() {
+		$('#hand2').fadeOut(1200);
 		$('#msg4').fadeOut(1000);
 	}, 13000); 
 	setTimeout(function() {
 		// "to start over"
 		$('#msg5').fadeIn(1000);
-		$('.demo_ltr').fadeOut(1000);
 	}, 14500); 
 	setTimeout(function() {
 		$('#msg5').fadeOut(1100);
-	}, 15000); 
+		$('.demo_ltr').fadeOut(1000);
+	}, 15500); 
 	setTimeout(function() {
 		// "Good job!"
-		$('#msg6').fadeIn(2000);
+		$('#msg6').fadeIn(1500);
 	}, 17000); 
 	setTimeout(function() {
 		$('#msg6').fadeOut(1500);

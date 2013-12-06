@@ -32,6 +32,7 @@
 			    		<img id="msg6" src="img/msg6.png" alt="demo message 6">
 			    	</div>
 			    	<img id="refresh" src="img/delete.png" alt='refresh'>
+			    	<img id="hand2" src="img/hand.png" alt="hand2">	
 			</div>
 			<!-- Image search results -->	
 			<div id="search_results">

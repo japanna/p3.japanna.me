@@ -102,8 +102,18 @@ h2 {
 #hand {
     display: none;
     position: relative;
-    right:  370px;
+    top: 50px;
+    right:  200px;
+    width: 155px;
 }
+
+#hand2 {
+    display: none;
+    position: absolute; 
+    bottom: 105px; 
+    left: 650px; 
+    z-index: 1; 
+} 
 
 #backspace {
     height: 74px;
@@ -124,8 +134,9 @@ h2 {
 
 #greeting {
     position: relative;
-    right: 70px;
+    right: -50px;
     bottom: 1020px;
+    width: 155px;
 }
 
 #search_results_img {
@@ -159,15 +170,12 @@ h2 {
     height: 60px;
 }
 
-#refresh {
-    width: 54;
-    height: 54;
-    position: relative;
-    left: 130px;
-    bottom: 50px;
-    text-align: center;
-    cursor: pointer;
-}
+#refresh { 
+    position:absolute; 
+    bottom: 140px; 
+    left: 770px; 
+    z-index: 1; 
+} 
 
 .letter {
     padding: 5px;
