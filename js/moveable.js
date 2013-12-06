@@ -15,7 +15,7 @@ $(document).ready(function(){
 	var lastTime = 0;
 	var lastTimeStr = localStorage['lastTime'];
 	if (lastTimeStr) lastTime = parseInt(lastTimeStr, 10);
-	if (now - lastTime > 0) { //3*24*60*60*1000
+	if (now - lastTime > 3*24*60*60*1000) {
     // do animation
     	$('#greeting').animate({bottom: "50px"}, 3500);
 		setTimeout(function() {
