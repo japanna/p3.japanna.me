@@ -82,7 +82,7 @@
 		<footer>
     <p><a href="https://github.com/japanna/p3.japanna.me" target="_blank">&nbsp;about&nbsp; | </a> 
     	<a href="http://twitter.com/japanna" target="_blank">contact &nbsp;|</a> 
-        <a href="http://linkedin.com/in/annamckelvey" target="_blank">&nbsp;linked in</a>
+        <a id="demo_link">&nbsp;demo</a>
     </p>
   </footer>
 		<script src="js/moveable.js"></script>

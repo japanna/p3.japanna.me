@@ -124,7 +124,7 @@ h2 {
 }
 
 #search_results {
-    width:110;
+    width:110px;
     height: 400px;
     float: right;
     margin-right: 50px;
@@ -200,6 +200,11 @@ a:link,
 a:visited {
     color: #898989;
     text-decoration: none;
+}
+
+#demo_link {
+    color: #898989;
+    cursor: pointer;
 }
 
 footer {
