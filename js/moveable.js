@@ -205,11 +205,11 @@ function demo(){
 	setTimeout(function() {
 		// "Good job!"
 		$('#msg6').fadeIn(1300);
-	}, 19000); 
+	}, 17500); 
 	setTimeout(function() {
 		$('#msg6').fadeOut(1300);
 		$('#refresh').fadeIn(5000);
-	}, 20000); 
+	}, 195000); 
 };
 
 /*-----------------------------------------------------------

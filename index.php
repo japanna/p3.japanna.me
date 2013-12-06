@@ -80,7 +80,7 @@
 			</div>
 		</div>
 		<footer>
-    <p><a href="https://github.com/japanna/p3.japanna.me" target="_blank">&nbsp;about&nbsp; | </a> 
+    <p><a href="https://github.com/japanna/p3.japanna.me" target="_blank">&nbsp;git&nbsp; | </a> 
     	<a href="http://twitter.com/japanna" target="_blank">contact &nbsp;|</a> 
         <a id="demo_link">&nbsp;demo</a>
     </p>
